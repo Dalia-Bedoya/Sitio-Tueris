@@ -1,0 +1,78 @@
+<?php
+define('PAGE_ROOT', './SitioWeb_Tueris');
+if (isset($_GET['email']) && !empty($_GET['email']))
+    require_once ('server/iniciar.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imgs/logo1.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/registro.css" />
+    <title>Tueris</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="index.html"><img class="mt-2 mb-2" src="imgs/logo1.png" alt="logo"
+                            style="width: 150px;" /></a>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-end">
+                    <nav class="text-center">
+                        <ul class="d-flex menu mt-4">
+                            <li><a class="menu-bg rounded-pill" href="ingresar.html">Ingresar</a></li>
+                            <li><a class="menu-bg rounded-pill" href="registrousuario.html">Crear cuenta</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="contenedor-2 color-change-2x">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-8">
+                    <div class="card rounded-5">
+                        <div class=" text-center mb-5">
+                            <h2 class="title">Ingresa</h2>
+                        </div>
+                        <div class="col-12">
+                            <form class="form-body" method="get">
+                                <input id="email" class="form rounded-3" type="email" name="email" value=""
+                                    autocomplete="email" placeholder="E-mail">
+                                <input id="contraseña" class="form rounded-3" type="password" name="password" value=""
+                                    autocomplete="contraseña" placeholder="Contraseña">
+
+                                <div>
+                                    <p>Si aún no te has registrado, <a class="recuperar fs-5 fw-bold"
+                                            href="registrousuario.html">Regístrate aquí</a></p>
+                                </div>
+
+                                <button id="btnEnviar" type="submit" name="enviar">
+                                    INGRESAR
+                                </button>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
