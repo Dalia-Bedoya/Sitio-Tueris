@@ -1,0 +1,24 @@
+<?php
+session_start();
+include('cn.php');
+
+$email = $_GET['email'];
+$password = $_GET['password'];
+$password = hash('md5',$password);
+
+$query = $cnn->prepare("SELECT * FROM datosusuario WHERE email=:email AND password=:password"); //consulta si existe un email con contraseña en la base de datos
+$query->bindParam("email", $email, PDO::PARAM_STR);
+$query->bindParam("password",$password, PDO::PARAM_STR);
+$query->execute();
+
+$result = $query->fetch(PDO::FETCH_ASSOC); //Convierte la consulta en un vector y la guarda en la variable result
+if(!$result || !count($result)){ 
+/*  echo 'Email o contraseña incorrectos'; */
+echo '<div style="background-color: #ffffff; color: #e63946; padding: 10px; border: 1px solid #e63946; border-radius: 5px;">Email o contraseña incorrectos</div>';
+}else{
+    $_SESSION['user'] = $result;
+    $_SESSION['nombre_usuario'] = $result['nombre']; // Almacena el nombre del usuario en la sesión
+    header("location: shop.php");
+}//en caso de que no encuentre nada en result
+
+    

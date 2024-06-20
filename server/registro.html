@@ -1,0 +1,33 @@
+<?php
+include('cn.php');
+session_start(); //inicio de session de variables de usuario
+
+if(isset($_POST['enviar'])){//verifico que nada venga en blanco
+    $name = $_POST['nombre'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $password = hash('md5',$password); //md5 para ocultar la contraseña, una contraseña encriptada
+
+    $query = $cnn->prepare("SELECT * FROM datosusuario WHERE email=:email"); //para consultar si existe el email en la base de datos
+    $query->bindParam("email",$email, PDO::PARAM_STR);
+    $query->execute();
+
+    if($query->rowCount()>0){ //ayuda a contar el numero de filas y detecta si en ellas existe el email
+        echo '<div style="background-color: #ffffff; color: #e63946; padding: 10px; border: 1px solid #e63946; border-radius: 5px;">Este email ya se encuentra registrado</div>';
+    }
+
+    if($query->rowCount()==0){
+        $query = $cnn->prepare("INSERT INTO datosusuario (nombre, email, password) VALUES (:nombre, :email, :password)");
+        $query->bindParam("nombre",$name,PDO::PARAM_STR);
+        $query->bindParam("email",$email,PDO::PARAM_STR);
+        $query->bindParam("password",$password,PDO::PARAM_STR);
+        $result= $query->execute();
+
+        if($result){
+            echo '<div style="background-color: #ffffff; color: #29bf12; padding: 10px; border: 1px solid #29bf12; border-radius: 5px;">Tu registro fue exitoso</div>';
+        }else{
+            echo '<div style="background-color: #ffffff; color: #e63946; padding: 10px; border: 1px solid #e63946; border-radius: 5px;">Error de registro</div>';
+        }
+    }
+
+}

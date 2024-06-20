@@ -1,0 +1,14 @@
+<?php
+/* datos para cambiar cuando suba al hosting  */
+
+define('USER', 'root'); //variable de usuario de la bd
+define('PASSWORD', ''); //variable de contraseña de la bd
+define('HOST', 'localhost'); //variable del hosting
+define('DATABASE', 'Tueris'); //variable con el nombre 
+/* final de los datos para cambiar cuando suba al hosting  */
+
+try {
+    $cnn = new PDO("mysql:host=" .HOST.";dbname=".DATABASE,USER,PASSWORD);
+}catch(PDOException $e){//ESTO ES UNA EXCEPCION PARA CUANDO EL TRY NO FUNCIONE
+    exit ("error: ".$e->getMessage());
+}
