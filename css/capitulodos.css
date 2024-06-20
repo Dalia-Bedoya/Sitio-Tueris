@@ -1,0 +1,261 @@
+body {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cap{
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.cap:hover{
+  filter: contrast(1.1);
+  transform: translateY(-10px);
+}
+.comic{
+  display: flex;
+  justify-content: center;
+}
+.logocomic{
+  width: 50%;
+}
+.menu{
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a4d2d37e;
+}
+.menudos{
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+}
+.helpbtn{
+  width: 50px;
+  cursor: pointer;
+}
+.helpbtn:hover{
+  transform: scale(1.1);
+}
+.homebtn{
+  width: 50px;
+  cursor: pointer;
+}
+.homebtn:hover{
+  transform: scale(1.1);
+}
+.modal-body {
+/*   background-image: url("../imgs/bg-bb-alert.png"); */
+  /* background-size: cover; */
+  border-radius: 15px;
+  padding: 20px 50px 50px 50px;
+}
+.modal-header {
+  background-color: #b3d7ce93;
+}
+.modal-title {
+  font-family: "Chopic3DFreeversion-Regular";
+}
+.modal-content {
+  background-size: cover;
+  animation: translateModal 1s forwards;
+  width: 550px;
+  height: auto;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 1px 7px 25px #0009;
+  transition: all 0.5s ease;
+  position: relative;
+  border-radius: 15px;
+}
+@keyframes translateModal {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10%);
+  }
+}
+.iconomodal-1{
+  width: 28%;
+  height: 30%;
+}
+.iconomodal-2{
+  width: 30%;
+  height: 30%;
+}
+.iconomodal-3{
+  width: 35%;
+  height: 35%;
+}
+.iconomodal-4{
+  width: 26%;
+  height: 30%;
+}
+
+/* escena siete */
+#teletransportacion {
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+#btn-esc7 {
+  width: 8%;
+  position: absolute;
+  top: 40%;
+  right: 45%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate;
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+#escena7 {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+#escena7img {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+#fondoesc7 {
+  display: none;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+/* escena 8 */
+#btn-esc8 {
+  width: 8%;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate; 
+}
+#escena8{
+  display: none;
+  width: 100%;
+}
+#escena8img{
+  width: 100%;
+}
+/* escena 9 */
+#btn-esc9 {
+  width: 8%;
+  position: absolute;
+  top: 40%;
+  right: 25%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate; 
+}
+#escena9{
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+#escena9img{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+
+}
+/* escena 10 */
+#btn-esc10 {
+  width: 8%;
+  position: absolute;
+  top: 40%;
+  right: 45%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate; 
+}
+#escena10{
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+#escena10img{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+
+}
+/* escena 11 */
+#btn-esc11 {
+  width: 8%;
+  position: absolute;
+  top: 40%;
+  right: 45%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate; 
+}
+#escena11{
+  position: absolute;
+  display: none;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+#escena11img{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+
+}
+/* escena 12 */
+#btn-esc12 {
+  width: 8%;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate; 
+}
+#escena12{
+  display: none;
+  width: 100%;
+}
+#escena12img{
+  width: 100%;
+}
+
+
+@media only screen and (min-width: 360px) and (max-width: 800px) {
+  .modal-content {
+    background-size: cover;
+    animation: translateModal 1s forwards;
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 1px 7px 25px #0009;
+    transition: all 0.5s ease;
+    position: relative;
+    border-radius: 15px;
+  }
+}

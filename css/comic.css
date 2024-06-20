@@ -1,0 +1,49 @@
+body {
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  @font-face {
+    font-family: "ShadedLarch_PERSONAL_USE";
+    src: url(../tipo/ShadedLarch_PERSONAL_USE.ttf);
+  }
+  @font-face {
+    font-family: "GalSILR";
+    src: url(../tipo/GalSILR.ttf);
+  }
+  .contenedor {
+    background-color: #a4d2d3;
+    background-size: cover;
+    height: 100vh;
+}
+  .iconos {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.03);
+  }
+  .capitulos{
+    font-family: "Chopic3DFreeversion-Regular";
+  }
+  .cap{
+    margin-bottom: 10%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .cap:hover{
+    filter: contrast(1.1);
+    transform: translateY(-10px);
+  }
+
+  @media only screen and (min-width: 360px) and (max-width: 800px){
+    .contenedor {
+      background-color: #a4d2d3;
+      background-size: cover;
+      height: 200vh;
+  }
+  }

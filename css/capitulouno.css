@@ -1,0 +1,355 @@
+body {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* .flecha-01{
+  display: block;
+  position: absolute;
+  top: 8%;
+  right: 20%;
+  z-index: 1;
+  animation: flecha 0.5s ease-in-out infinite;
+}
+@keyframes flecha{
+  from {
+    transform: translatex(0);
+  }
+  to {
+    transform: translatex(3px);
+    transform: translateY(3px);
+  }
+} */
+.cap{
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.cap:hover{
+  filter: contrast(1.1);
+  transform: translateY(-10px);
+}
+.comic{
+  display: flex;
+  justify-content: center;
+}
+.logocomic{
+  width: 50%;
+}
+.menu{
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a4d2d37e;
+}
+.menudos{
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+}
+.helpbtn{
+  width: 50px;
+  cursor: pointer;
+}
+.helpbtn:hover{
+  transform: scale(1.1);
+}
+.homebtn{
+  width: 50px;
+  cursor: pointer;
+}
+.homebtn:hover{
+  transform: scale(1.1);
+}
+.modal-body {
+/*   background-image: url("../imgs/bg-bb-alert.png"); */
+  /* background-size: cover; */
+  border-radius: 15px;
+  padding: 20px 50px 50px 50px;
+}
+.modal-header {
+  background-color: #b3d7ce93;
+}
+.modal-title {
+  font-family: "Chopic3DFreeversion-Regular";
+}
+.modal-content {
+  background-size: cover;
+  animation: translateModal 1s forwards;
+  width: 550px;
+  height: auto;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 1px 7px 25px #0009;
+  transition: all 0.5s ease;
+  position: relative;
+  border-radius: 15px;
+}
+@keyframes translateModal {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10%);
+  }
+}
+.iconomodal-1{
+  width: 28%;
+  height: 30%;
+}
+.iconomodal-2{
+  width: 30%;
+  height: 30%;
+}
+.iconomodal-3{
+  width: 35%;
+  height: 35%;
+}
+.iconomodal-4{
+  width: 26%;
+  height: 30%;
+}
+/* boton escena uno*/
+#btn-esc1 {
+  width: 8%;
+  position: absolute;
+  top: 60%;
+  right: 58%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate; 
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1; 
+  }
+  100% {
+    opacity: 0.5; 
+  }
+}
+
+/* animacion Escena uno*/
+.cartucho{
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.carousel {
+  position: relative;
+}
+.carousel-item{
+  transition: none;
+}
+.escenauno{
+  position: relative;
+  background-image: url(../comic/Escena1nubes.png), url(../comic/Escena1.png);
+  background-size: cover;
+  background-position: 0px, 0px, 0px;
+  animation: nubes-escenauno 70s linear infinite;
+}
+@keyframes nubes-escenauno{
+  0% {
+    background-position-x: 0px, 0px, 0px;
+  }
+  100% {
+    background-position-x: 2000px, 3500px, 0px;
+  }
+}
+/* escena2 */
+.img-re{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.planta{
+  position: absolute;
+  width: 12%;
+  bottom: 23%;
+  left: 9%;
+  animation: planta 8s infinite linear;
+}
+@keyframes planta{
+  0%{
+    transform: rotate(20deg);
+  }
+  50%{
+    transform: rotate(-1deg);
+  }
+  100%{
+    transform: rotate(20deg);
+  }
+}
+
+/* animacion escena dos */
+
+#cartuchoESC2{
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#btn-esc2 {
+  width: 8%;
+  position: absolute;
+  top: 1%;
+  left: 20%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate; 
+}
+#btn-esce2-02 {
+  width: 8%;
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate; 
+}
+#escena2heidi{
+  display: none;
+  width: 100%;
+}
+
+/* escenatres */
+#btn-esc3 {
+  width: 8%;
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate; 
+}
+#escena3{
+  display: none;
+  width: 100%;
+}
+.plantaesc3{
+  position: absolute;
+  width: 12%;
+  bottom: 38%;
+  left: 21%;
+  animation: planta3 8s infinite linear;
+}
+@keyframes planta3{
+  0%{
+    transform: rotate(8deg);
+  }
+  50%{
+    transform: rotate(-1deg);
+  }
+  100%{
+    transform: rotate(8deg);
+  }
+}
+#escena3img{
+  width: 100%;
+}
+/* escenacuatro */
+#btn-esc4 {
+  width: 8%;
+  position: absolute;
+  top: 40%;
+  right: 43%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate; 
+}
+#escena4{
+  display: none;
+  width: 100%;
+}
+#escena4img{
+  width: 100%;
+}
+#escena4img-end{
+  display: none;
+  width: 100%;
+}
+
+/* escenacinco */
+
+#btn-esc5 {
+  width: 8%;
+  position: absolute;
+  top: 60%;
+  right: 23%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate; 
+}
+#escena5{
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#escena5img{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* escena seis */
+#teletransportacion{
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+#btn-esc6 {
+  width: 8%;
+  position: absolute;
+  top: 45%;
+  left: 28%;
+  cursor: pointer;
+  animation: parpadeo 0.6s infinite alternate; 
+}
+#escena6{
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+#escena6img{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 800px){
+  .flecha-01{
+    position: absolute;
+    top: 8%;
+    right: 15%;
+    z-index: 1;
+    animation: flecha 0.5s ease-in-out infinite;
+  }
+  @keyframes flecha{
+    from {
+      transform: translatex(0);
+    }
+    to {
+      transform: translatex(3px);
+      transform: translateY(3px);
+    }
+  }
+  .modal-content {
+  background-size: cover;
+  animation: translateModal 1s forwards;
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 1px 7px 25px #0009;
+  transition: all 0.5s ease;
+  position: relative;
+  border-radius: 15px;
+}
+}
