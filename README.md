@@ -11,7 +11,7 @@ Recuerda encender el XAMPP
    
    Ejemplo: href="ingresar.html" a href="ingresar.php"
    
-4. Importa la base de datos Tueris.sql a MySQL (MUY IMPORTANTE)
+4. Importa la base de datos (Esta está en el repositorio: tueris.sql) a MySQL (MUY IMPORTANTE)
 5. LISTOO
 
    Si tienes dudas contáctame
