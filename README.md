@@ -7,7 +7,7 @@ Te dejaré aquí las instrucciones para que puedas ingresar al registro de usuar
 Recuerda encender el XAMPP
 
 1. Cambia las extensiones .html a .php
-2. Cambio los href que tienen extensión .html a .php en todos los documentos.
+2. Cambia los href que tienen extensión .html a .php en todos los documentos.
    
    Ejemplo: href="ingresar.html" a href="ingresar.php"
    
